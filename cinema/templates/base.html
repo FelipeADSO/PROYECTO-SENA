@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Cinema Los Andes</title>
+        
+        <link rel="shortcut icon" type="imagen/x-icon" href="/assets/img/Logo.jpeg">
+        <script src="{% static 'https://use.fontawesome.com/releases/v6.3.0/js/all.js' %}" crossorigin="anonymous"></script>
+        <link href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,700'%}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'%}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/style.css'%}" rel="stylesheet"/>
+        {% block style %}{% endblock %}
+    </head>
+<body>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-danger" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" style="color: #fff;" href="#page-top">Cinema Los Andes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" href="cartelera.html">Cartelera</a></li>
+                <li class="nav-item"><a class="nav-link" href="peliculas.html">Peliculas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactenos.html">Contactenos</a></li>
+                <li class="nav-item"><a class="nav-link" href="login-register.html"><i class="fa-regular fa-user" style="color: white;"></i></a>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block content %}
+
+{% endblock %}
+<footer class="py-4 bg-danger pie-pagina">
+    <div class="container p-4">
+        <p class="m-0 text-center text-white h-100">Copyright &copy;Andres Murcia 2025</p>
+    </div>
+</footer>
+</body>
+</html>
