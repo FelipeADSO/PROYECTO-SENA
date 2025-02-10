@@ -29,4 +29,4 @@ urlpatterns = [
     path('peliculas2',views.peliculas2, name='peliculas2'),
     path('contactenos',views.contactenos, name='contactenos'),
     path('login',views.login, name='login'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
