@@ -11,35 +11,18 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="imagen/x-icon" href="/assets/img/Logo.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     {% block style %}{% endblock %}
 
     {% block content %}
 <body>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-danger" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" style="color: #fff;" href="index.html">Cinema Los Andes</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="cartelera.html">cartelera</a></li>
-                        <li class="nav-item"><a class="nav-link" href="peliculas.html">Peliculas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contactenos.html">Contactenos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
+    <body id="page-top">    
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/12 valientes.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -74,7 +57,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/911.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -107,7 +90,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/1899.jpeg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -141,7 +124,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/alien.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -173,7 +156,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/avatar.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -209,7 +192,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imgagenes/you.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -243,7 +226,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/venom.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -278,7 +261,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/swat.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -310,7 +293,7 @@
     <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'imagenes/soy-leyenda.jpg' %}" alt="Close modal" /></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -355,7 +338,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/50-sombras.jpg"/>
+                            <img class="img-fluid" src="{% static 'imagenes/50-sombras.jpg' %}"/>
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">50 Sombras De Grey</div>
@@ -368,7 +351,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/alien.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/alien.jpg'%}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Alien</div>
@@ -381,7 +364,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/avatar.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/amigos.jpeg'%}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Avatar</div>   
@@ -394,7 +377,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/deapool.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/deapool.jpg' %}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">DeadPoll & Wolverine</div>
@@ -407,7 +390,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/ciudad-perdida.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/ciudad-perdida.jpg' %}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Cuidad Perdida</div>
@@ -420,7 +403,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/garfield.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/garfield.jpg' %}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Garfield</div>
@@ -433,7 +416,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/godzilavskong.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/godzilavskong.jpg' %}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Godzilla vs Kong</div>
@@ -446,7 +429,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/intensamente.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/intensamente.jpg' %}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Intensamente 2</div>
@@ -459,7 +442,7 @@
                             <div class="portfolio-hover" style="background-color: #0f0f0fad;">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/peliculas/joker.jpg" alt="..." />
+                            <img class="img-fluid" src="{% static 'imagenes/joker.jpg' %}" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Joker</div>
@@ -484,8 +467,10 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
+    <script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'https://cdn.startbootstrap.com/sb-forms-latest.js' %}"></script>
+    <script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' %}"></script>
+
 {% endblock %}

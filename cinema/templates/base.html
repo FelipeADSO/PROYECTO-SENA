@@ -8,11 +8,12 @@
         <meta name="author" content="" />
         <title>Cinema Los Andes</title>
         
-        <link rel="shortcut icon" type="imagen/x-icon" href="/assets/img/Logo.jpeg">
+        <link rel="shortcut icon" type="imagen/x-icon" href="{% static 'imgagenes/Logo.jpeg' %}">
+        <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' %}">
         <script src="{% static 'https://use.fontawesome.com/releases/v6.3.0/js/all.js' %}" crossorigin="anonymous"></script>
-        <link href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,700'%}" rel="stylesheet" type="text/css" />
-        <link href="{% static 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'%}" rel="stylesheet" type="text/css" />
-        <link href="{% static 'css/style.css'%}" rel="stylesheet"/>
+        <link href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
         {% block style %}{% endblock %}
     </head>
 <body>
@@ -20,7 +21,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-danger" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" style="color: #fff;" href="#page-top">Cinema Los Andes</a>
+        <a class="navbar-brand" style="color: #fff;" href="{% url 'inicio' %}">Cinema Los Andes</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars ms-1"></i>
@@ -28,9 +29,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" href="{% url 'cartelera' %}">Cartelera</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'peliculas' %}">Peliculas</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'peliculas' %}">Peliculas</a></li>    
                 <li class="nav-item"><a class="nav-link" href="{% url 'contactenos' %}">Contactenos</a></li>
-                <li class="nav-item"><a class="nav-link" href="login-register.html"><i class="fa-regular fa-user" style="color: white;"></i></a>
+                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
             </ul>
         </div>
     </div>
@@ -38,10 +39,38 @@
 {% block content %}
 
 {% endblock %}
-<footer class="py-4 bg-danger pie-pagina">
+<footer class="footer text-center  bg-danger">
+    <div class="container">
+        <div class="row">
+            <!-- Información del cine -->
+            <div class="col-md-6 mb-6">
+                <h4 class="" style="color: #fff;">Cinema Los Andes</h4>
+                <p class="" style="color: #fff;">📍 Dirección: calle 7 # 9-60 centro, Garzon, Colombia</p>
+                <p class="" style="color: #fff;">📞 Teléfono: 3208497878</p>
+                <p class="" style="color: #fff;">📧 Email: cinemalosandes@gmail.com</p>
+            </div>
+            
+            <!-- Redes sociales -->
+            <div class="col-md-6">
+                <h4 class="" style="color: #fff;">Síguenos en nuestras redes</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/56912345678" target="_blank"><i class="fab fa-whatsapp fa-2x text-success" style="color: #fff;"></i></a>
+                    <a href="https://facebook.com/cinemalosandes" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/cinemalosandes" target="_blank"><i class="fab fa-x-twitter" style="color: black;"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="" style="color: #fff;">&copy; 2024 Cinema Los Andes. Todos los derechos reservados.</p>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</footer>
+<script src="h{% static 'ttps://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static 'https://cdn.startbootstrap.com/sb-forms-latest.js' %}"></script>
+<!-- <footer class="py-4 bg-danger pie-pagina">
     <div class="container p-4">
         <p class="m-0 text-center text-white h-100">Copyright &copy;Andres Murcia 2025</p>
     </div>
-</footer>
+</footer> -->
 </body>
 </html>

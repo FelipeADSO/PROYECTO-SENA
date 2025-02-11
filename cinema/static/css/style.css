@@ -11384,3 +11384,18 @@ hr {
   max-height: 400px; /* Controla la altura máxima de las imágenes */
   object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
 }
+.carousel-item img {
+  width: 100%;
+  height: 600px; /* O puedes usar '100%' si quieres que se ajuste dinámicamente */
+  object-fit: cover;
+}
+#myCarousel {
+  width: 100%;
+  max-width: 900px; /* Para que no sea más grande de lo necesario */
+  margin: auto; /* Centrar el carrusel */
+}
+.carousel-item img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
