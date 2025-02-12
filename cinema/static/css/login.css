@@ -1,0 +1,46 @@
+/* Fondo con degradado */
+body {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Tarjeta de Login */
+.card {
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de inicio de sesión */
+.btn-danger {
+    background-color: #ff4b2b;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #ff2e63;
+}
+
+/* Campos de entrada */
+.form-control {
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Mensajes de error */
+.alert {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Enlace de registro */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

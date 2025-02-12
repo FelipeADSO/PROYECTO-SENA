@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-zp1uc2+hv8ih(8jb9)+)k$@g+4++%4zi^%083v588jr@2mxf)q
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = 'cartelera'
 
 
 # Application definition
