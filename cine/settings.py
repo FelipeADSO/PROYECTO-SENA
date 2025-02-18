@@ -32,7 +32,7 @@ LOGIN_REDIRECT_URL = 'estrenos'
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface',
+    # 'admin_interface',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cinema',
-    'colorfield',
+    # 'colorfield',
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
