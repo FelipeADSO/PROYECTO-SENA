@@ -26,11 +26,14 @@ urlpatterns = [
     path('inicio',views.inicio, name='inicio'),
     path('cartelera',views.cartelera, name='cartelera'),
     path('peliculas',views.peliculas, name='peliculas'),
-    path('peliculas2',views.peliculas2, name='peliculas2'),
+    path('peliculas_2',views.peliculas_2, name='peliculas_2'),
     path('contactenos',views.contactenos, name='contactenos'),
     path('login',views.login, name='login'),
     path('somos',views.somos, name='somos'),
-    path('register',views.register, name='register'),
-    path('estrenos/', views.estrenos, name='estrenos'), # Lista de productos 
-    path('agregar_Peliculas/', views.agregar_Peliculas, name="agregar_Peliculas"), 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('register',views.register, name='register'),]
+    # path('estrenos/', views.estrenos, name='estrenos'),
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # Asegúrate de tener esta línea

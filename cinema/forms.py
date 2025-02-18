@@ -1,8 +1,8 @@
 # forms.py 
 from django import forms 
-from.models import estrenos
+from.models import peliculas
 
-class estrenosForm(forms.ModelForm): 
+class peliculasForm(forms.ModelForm): 
     class Meta: 
-        model = estrenos
+        model = peliculas
         fields = ['nombre', 'descripcion', 'precio', 'stock', 'imagen']

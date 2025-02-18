@@ -31,16 +31,19 @@ window.addEventListener('DOMContentLoaded', event => {
     };
 
     // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarCollapse = document.querySelector("#navbarResponsive");
+    
+        if (navbarToggler && navbarCollapse) {
+            navbarCollapse.addEventListener("click", function (event) {
+                if (event.target.classList.contains("nav-link")) {
+                    let bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false,
+                    });
+                    bsCollapse.hide(); // Cierra el menú correctamente
+                }
+            });
+        }
     });
-
 });

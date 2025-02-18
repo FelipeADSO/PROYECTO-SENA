@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User 
 from django.contrib import messages 
 from django.contrib.auth import authenticate, login as auth_login
-from .forms import estrenosForm
+from .forms import peliculasForm
 
 # Create your views here.
  
@@ -17,10 +17,10 @@ def cartelera(request):
     return render(request, 'cartelera.html')
 
 def peliculas(request):
-    return render(request, 'peliculas.html')
+    return render(request, 'peliculas.html', )
 
-def peliculas2(request):
-    return render(request, 'peliculas2.html')
+def peliculas_2(request):
+    return render(request, 'peliculas_2.html')
 
 def contactenos(request):
     return render(request, 'contactenos.html')
@@ -28,8 +28,8 @@ def contactenos(request):
 def somos(request):
     return render(request, 'somos.html')
 
-def estrenos(request):
-    return render(request, 'estrenos.html')
+# def estrenos(request):
+#     return render(request, 'estrenos.html')
 
 def register(request):
     if request.method == 'POST':
@@ -49,45 +49,21 @@ def register(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 auth_login(request, user)
-                messages.success(request, "¡Registro exitoso! Has iniciado sesión.")
+                messages.success(request, "¡Registro exitoso! Te has registrado.")
                 return redirect('login')  # Redirige a la página principal o dashboard
 
     return render(request, 'register.html')
 
 def login(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-
-        if not username or not password:
-            messages.error(request, 'Por favor, ingresa ambos campos.')
-            return render(request, 'login.html')
-
-        try:
-            user = User.objects.get(username=username)
-        except User.DoesNotExist:
-            messages.error(request, 'El usuario no existe.')
-            return render(request, 'login.html')
-
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
+        user = authenticate(request, username=username, password=password)
         if user is not None:
-            authenticated_user = authenticate(request, username=user.username, password=password)
-            if authenticated_user is not None:
-                auth_login(request, authenticated_user)
-                return redirect('productos')
-            else:
-                messages.error(request, 'Contraseña incorrecta.')
+            auth_login(request, user)  # Usa auth_login en lugar de login para evitar conflictos
+            messages.success(request, f"¡Bienvenido, {user.username}!")
+            return redirect("inicio")  # Reemplaza "home" con la URL de tu página de inicio
         else:
-            messages.error(request, 'El usuario no está registrado.')
-
-    return render(request, 'login.html')
-
-
-def agregar_Peliculas (request): 
-    if request.method == 'POST': 
-        form = estrenosForm(request.POST, request.FILES) 
-        if form.is_valid(): 
-            form.save() 
-            return redirect('estrenos') # Redirige a la lista de produ 
-    else: 
-        form = estrenosForm() 
-    return render(request, 'agrear_Peliculas.html', {'form': form})
+            messages.error(request, "Usuario o contraseña incorrectos.")
+    
+    return render(request, "login.html")
